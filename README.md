@@ -42,7 +42,38 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
  
   ### Data Analysis
   ---
-  SQL
+ Below are some queries used during analysis: 
+```SQL
+SELECT * FROM [dbo].[project1] 
+
+---Total sales for each product category 
+select Product , SUM(Total_Sales) as Total_Sales_per_Product
+from [dbo].[project1]
+group by Product
+
+---Number of sales transaction in each region
+select Region, COUNT (Total_Sales) as No_of_Sales_Transactions
+from dbo.project1
+group by region
+
+---Highest selling product by total sales value
+select Product , sum(Total_Sales) as Total_Sales
+from [dbo].[project1]
+group by Product
+order by SUM(Total_Sales) desc
+
+---Total Revenue per Product
+select top 1 Product , SUM(Total_Sales) as Total_Revenue_per_Product
+from [dbo].[project1]
+group by Product
+
+---Top 5 customer by Total Sales
+select top 5 Customer_Id , SUM(Total_Sales) as Total_Sales
+from [dbo].[project1]
+group by Customer_Id
+order by SUM(Total_Sales)desc
+
+```
 
 ### Data Visualization
 
