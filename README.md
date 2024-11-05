@@ -42,8 +42,10 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
  
   ### Data Analysis
   ---
+-SQL
+
  Below are some queries used during analysis: 
-```SQL
+```
 SELECT * FROM [dbo].[project1] 
 
 ---Total sales for each product category 
