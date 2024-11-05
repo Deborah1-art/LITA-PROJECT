@@ -50,11 +50,13 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
  Below are some analysis done on the data:
 1. Total sales by product, region, month using pivot tables
    ![Screenshot 2024-11-05 221532](https://github.com/user-attachments/assets/1459facc-a699-450a-8d8f-391177c841aa)
+   
    ![Screenshot 2024-11-05 221748](https://github.com/user-attachments/assets/139b874b-a8c2-4665-824c-4ec3e4d3307b)
+   
 ![Screenshot 2024-11-05 222001](https://github.com/user-attachments/assets/612d19b3-5c0c-4dcf-91cf-5bbb143c6149)
 
 
-2. Average sales per product and total revenue by region using excel formulas such as AVERAGEIF and SUMIF
+3. Average sales per product and total revenue by region using excel formulas such as AVERAGEIF and SUMIF
    
   - SQL
 
