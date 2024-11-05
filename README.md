@@ -42,39 +42,66 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
  
   ### Data Analysis
   ---
--SQL
+  - Mircosoft Excel
+ Below are some analysis done on the data:
+1. Total sales by product, region, month using pivot tables
+   
+3. Average sales per product and total revenue by region using excel formulas such as AVERAGEIF and SUMIF
+   
+  - SQL
 
  Below are some queries used during analysis: 
-```
-SELECT * FROM [dbo].[project1] 
+```SQL
+SELECT * FROM [dbo].[SalesData]
 
 ---Total sales for each product category 
 select Product , SUM(Total_Sales) as Total_Sales_per_Product
-from [dbo].[project1]
+from [dbo].[SalesData]
 group by Product
 
 ---Number of sales transaction in each region
 select Region, COUNT (Total_Sales) as No_of_Sales_Transactions
-from dbo.project1
+from [dbo].[SalesData]
 group by region
 
 ---Highest selling product by total sales value
-select Product , sum(Total_Sales) as Total_Sales
-from [dbo].[project1]
+select top 1 Product , sum(Total_Sales) as Total_Sales
+from [dbo].[SalesData]
 group by Product
 order by SUM(Total_Sales) desc
 
 ---Total Revenue per Product
-select top 1 Product , SUM(Total_Sales) as Total_Revenue_per_Product
-from [dbo].[project1]
+select Product , SUM(Total_Sales) as Total_Revenue_per_Product
+from [dbo].[SalesData]
 group by Product
 
+---Monthly Total Sales for the current Year
+select MONTH (OrderDate) as MONTH,
+sum (Total_Sales) as Monthly_Sales_Total
+from [dbo].[SalesData]
+where year(OrderDate) =2024
+group by month(OrderDate)
+order by month (OrderDate);
+
 ---Top 5 customer by Total Sales
-select top 5 Customer_Id , SUM(Total_Sales) as Total_Sales
-from [dbo].[project1]
+select top 5 Customer_Id , 
+SUM(Total_Sales) as Total_Purchase_Amount
+from [dbo].[SalesData]
 group by Customer_Id
 order by SUM(Total_Sales)desc
 
+---Percentage of total sales contributed by each region
+with totalSales as (select SUM(Total_Sales) as TotalSalesAmount from [dbo].[SalesData])
+select Region, SUM(Total_Sales) as Region_Total_Sales,
+(SUM(Total_Sales) * 100/ (select TotalSalesAmount from totalSales)) as Percentage_of_Total_Sales
+from [dbo].[SalesData]
+group by Region
+
+--- Prodcts with no sales in the last quarter
+select Product from [dbo].[SalesData]
+group by Product
+Having sum (CASE WHEN OrderDate between '2024-06-01' AND '2024-08-31'
+THEN 1 ELSE 0 End) = 0
 ```
 
 ### Data Visualization
