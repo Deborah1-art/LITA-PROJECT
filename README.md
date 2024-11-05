@@ -4,7 +4,7 @@
 
 ### Project Overview
 ---
-This project leverages on 
+This project involves analyzing the sales performance of a retail store to identify essential insights, including top-selling products, regional sales performance and monthly sales trends. the objective is to explore and interpret the sales data, providing a comprehensive view of the store's performance. These findings will be presented through Microsoft Excel, Structured Query Language (SQL) and an interactive Power BI dashboard, which would enable data-driven decisions. 
 
 ### Data Source
 ---
