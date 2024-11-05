@@ -18,6 +18,9 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
 - GitHub for Portfolio Building
 
  ### Data Cleaning and Prepartions
+ ---
+ 1. Data loading and Inspection
+ 2. Data cleaning and formatting
 
   ### Exploratory Data Analysis
   ---
@@ -25,7 +28,7 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
 - Microsoft Excel
     1. Using pivot tables summarize Total sales by product, region and month.
     2. Use Excel formulas to calculate the metrics such as average sales per product and total revenue by region.
-    3. Create any other interresting reports.
+    3. Create any other interesting reports.
 
 - Structured Query Language (SQL)
    1. Retrieve the total sales for each product category.
@@ -42,7 +45,8 @@ The dataset used in this project is the LITA Capstone Dataset (Sales Data). This
  
   ### Data Analysis
   ---
-  - Mircosoft Excel
+ - Mircosoft Excel
+  
  Below are some analysis done on the data:
 1. Total sales by product, region, month using pivot tables
    
