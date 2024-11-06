@@ -122,6 +122,9 @@ THEN 1 ELSE 0 End) = 0
 ```
 
 ### Data Visualization
+
+Below are some visualization done on data using Power BI:
+
   ![Average sales by month 2](<Average sales by month 2.png>)
   ![Total sales by month 2](<Total sales by month 2.png>)
   ![Total sales by product 2](<Total sales by product 2.png>)
